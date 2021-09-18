@@ -7,8 +7,7 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500,600,700,800,900|Open+Sans:300,400,600"
         rel="stylesheet">
     <title>Home</title>
 </head>
@@ -17,14 +16,37 @@
     <nav class="navbar">
         <h1 id="logo">Hackrice Project</h1>
         <ul>
-            <li><a class="navbar" href="{{ url_for('home')}}">Home</a></li>
-            <li><a class="navbar" href="">About</a></li>
+            <li><a class="navbar" href="{{ url_for('about') }}">about</a></li>
+            <li><a class="navbar" id='unclickable'>•</a></li>
+            <li><a class="navbar" href="{{ url_for('home')}}">home</a></li>
         </ul>
     </nav>
     <div class="box">
         <h2>Working Title</h2>
-        <p>Test text here. Idk what we'll put here.</p>
+        <p>Our team has created an interactive tool which allows you to see the air
+            quality and median incomes placed side by side for all counties of a given state.</p>
+        <form method='post' action='/home'>
+            <label for="state">Select a state:</label>
+            <select name="state" id="state">
+                {% for state in states %}
+                <option value="{{ state }}">{{state}}</option>
+                {% endfor %}
+            </select>
+            <input type='submit' value='Go'>
+        </form>
+        <img src='/plot.png'>
 
+        <h3>How to Read this Graph</h3>
+
+        <h4>What is AQI?</h4>
+        <p>AQI is a measure from 0 - 500 that describes daily air quality. Lower AQI values occur
+            on days with good air quality, and higher AQI values occur on days with bad air quality. </p>
+
+        <h4>90th Percentile AQI</h4>
+        <p>Lorem ipsum dolor sit amet 2 :)</p>
+
+        <h4>Median Household Income</h4>
+        <p>Lorem ipsum dolor sit amet</p>
     </div>
 </body>
 

@@ -16,19 +16,25 @@ html, body {
 h1#logo {
     float: left;
     position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
     font-size: xxx-large;
     margin-left: 2vw;
     margin-bottom: 4vh;
     margin-top: 5.5vh;
-    color: #F9F4E6;
+    color: #FFBAA2;
 }
 
 h2 {
     text-align: center;
-    color: #1c303d;
-    font-family: 'Montserrat';
+    font-size: xx-large;
+    margin-top: 0;
+    color: #F494AB;
+    font-family: "Archivo", sans-serif;
+}
+
+h3 {
+    margin-left: auto;
 }
 
 body {
@@ -37,10 +43,15 @@ body {
 }
 
 p {
-    margin-top: 6vh;
-    text-align: center;
+    /*margin-top: 6vh;*/
+    /*text-align: center;*/
     font-family: "Open Sans", sans-serif;
     color: #575A6C;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8em;
+    margin-bottom: 0;
 }
 
 div.box {
@@ -57,7 +68,6 @@ nav {
     background-color: #365367;
     display: inline-block;
     list-style-type: none;
-    font-family: "Montserrat", sans-serif;
     width: 100%;
     height: 16vh;
 }
@@ -65,7 +75,7 @@ nav {
 ul {
     list-style-type: none;
     margin-top: 11vh;
-    margin-right: 5vw;
+    margin-right: 3.5vw;
 }
 
 li {
@@ -79,12 +89,9 @@ li a {
     margin-bottom: 0.5vh;
     overflow: none;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     font-size: larger;
-    color:#FFBAA2;
-}
-
-li a {
+    color:#F9F4E6;
     text-decoration: none;
     background-image: linear-gradient(#F9F4E6, #F9F4E6);
     background-position: 0% 100%;
@@ -92,10 +99,70 @@ li a {
     background-size: 0% 0.5px;
     transition: background-size .5s;
     padding-bottom: 0.5vh;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
+}
+
+li a#unclickable {
+    background-image: none;
+    cursor: default;
+    font-size: x-large;
+    margin-left: 1.5vw;
+    margin-right: -1.5vw;
 
 }
 
 li a:hover, li a:focus {
     background-size: 100% 0.5px;
+}
+
+img {
+    border-top: solid 1px gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+form, select, input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+}
+
+form {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 10vh;
+    margin-bottom: 1vh;
+    padding-bottom: 2vh;
+}
+
+select {
+    border: none;
+    background-color: #eee;
+    color: #365367;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: -1vw;
+}
+
+select:focus  {
+    outline: none;
+}
+
+input {
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #365367;
+    color: white;
+    margin-left: -1.5vw;
+    border-radius: 20px;
+}
+
+input:hover {
+    cursor: pointer;
+    background-color: #1b2933;
+    transition: all;
 }
