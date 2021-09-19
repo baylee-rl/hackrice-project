@@ -15,30 +15,38 @@
 
 <body>
     <nav class="navbar">
-        <h1 id="logo">Hackrice Project</h1>
+        <h1 id="title">PollutionPlot</h1>
+        <img id='logo' src='static/Logo.png'>
         <ul>
-            <li><a class="navbar" href="{{ url_for('about') }}">About</a></li>
-            <li><a class="navbar" href="{{ url_for('home') }}">Home</a></li>
+            <li><a class="navbar" href="{{ url_for('about') }}">about</a></li>
+            <li><a class="navbar" id='unclickable'>•</a></li>
+            <li><a class="navbar" href="{{ url_for('home')}}">home</a></li>
         </ul>
     </nav>
     <div class="box">
         <h2>About the Project</h2>
-        <p>This data visualization project was created for HackRice XI by Baylee Keevan, Sophia Rohlfsen, Cyrus
+        <p class='centered'>This data visualization project was created for HackRice XI by Baylee Keevan, Sophia
+            Rohlfsen, Cyrus
             Najmi-Vannini, and Ethan Pham. Our data science project focuses on environmental justice, highlighting
             the economic inequities of clean air.</p>
 
-        <p>The Air Quality Index data was collected from the set Tables of Daily AQI provided by the EPA, and the
-            median income data was from the data set Unemployment and median household income for the U.S., States,
-            and counties, 2000-20 provided by the USDA.
+        <p class='centered'>The Air Quality Index data was collected from the set, "Tables of Daily AQI", provided by
+            the
+            EPA, and the
+            median income data was sourced from the dataset "Unemployment and median household income for the U.S.,
+            States,
+            and counties, 2000-20," provided by the USDA.
         </p>
 
-        <h3>Limitations</h3>
+        <h3>LIMITATIONS</h3>
         <h4>County-Level Data and Overgeneralization</h4>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Due to the size of some counties, the median household income data point may not fully represent the range of
+            communities inside of the county. For example cities often contain very poor communities and very rich
+            communities and median household income has no way to communicate this fact.</p>
 
 
         <h4>Alaska Does Not Exist</h4>
-        <p>Lorem ipsum dolor sit amet!</p>
+        <p>Due to limited available data, we have chosen to exclude Alaska from our data graphics.</p>
     </div>
 </body>
 

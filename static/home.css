@@ -13,7 +13,7 @@ html, body {
     padding: 0;
 }
 
-h1#logo {
+h1#title {
     float: left;
     position: relative;
     font-family: "Archivo", sans-serif;
@@ -34,7 +34,20 @@ h2 {
 }
 
 h3 {
-    margin-left: auto;
+    text-align: left;
+    font-weight: 900;
+    font-size: large;
+    margin-top: 40px;
+    color: #365367;
+    font-family: "Archivo", sans-serif;
+}
+
+h4 {
+    text-align: left;
+    font-size: medium;
+    /*margin-top: 0;*/
+    color: #F494AB;
+    font-family: "Archivo", sans-serif;
 }
 
 body {
@@ -54,10 +67,15 @@ p {
     margin-bottom: 0;
 }
 
+p.centered {
+    text-align: center;
+}
+
 div.box {
     width: 50%;
     margin: auto;
     margin-top: 10vh;
+    margin-bottom: 5vh;
     padding: 10vh 4vw;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 #1b2933, 0 6px 20px 0 #1b2933;
@@ -74,7 +92,7 @@ nav {
 
 ul {
     list-style-type: none;
-    margin-top: 11vh;
+    margin-top: -3vh;
     margin-right: 3.5vw;
 }
 
@@ -123,6 +141,15 @@ img {
     width: 90%;
 }
 
+img#logo {
+    border: none;
+    width: 7%;
+    margin-left: 0;
+    margin-top: 3vh;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
 form, select, input {
     font-family: 'Open Sans', sans-serif;
     font-size: small;
@@ -164,5 +191,5 @@ input {
 input:hover {
     cursor: pointer;
     background-color: #1b2933;
-    transition: all;
+    transition: all 0.5s ease;
 }

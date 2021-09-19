@@ -14,7 +14,8 @@
 
 <body>
     <nav class="navbar">
-        <h1 id="logo">Hackrice Project</h1>
+        <h1 id="title">PollutionPlot</h1>
+        <img id='logo' src='static/Logo.png'>
         <ul>
             <li><a class="navbar" href="{{ url_for('about') }}">about</a></li>
             <li><a class="navbar" id='unclickable'>•</a></li>
@@ -22,9 +23,12 @@
         </ul>
     </nav>
     <div class="box">
-        <h2>Working Title</h2>
-        <p>Our team has created an interactive tool which allows you to see the air
-            quality and median incomes placed side by side for all counties of a given state.</p>
+        <h2>Visualizing Connections Between Class and Air Quality</h2>
+        <p class='centered'>While it is widely known that our world’s path towards climate catastrophe is a threat
+            to all life on earth, the communities that are most vulnerable to these changes are
+            often overlooked. That is why we have focused our tool, PollutionPlot, to draw attention
+            to these inequities. Our team has created an interactive tool which allows you to see the air
+            quality and median incomes placed side by side for most counties of a given state.</p>
         <form method='post' action='/home'>
             <label for="state">Select a state:</label>
             <select name="state" id="state">
@@ -36,17 +40,23 @@
         </form>
         <img src='/plot.png'>
 
-        <h3>How to Read this Graph</h3>
+        <h3>HOW TO READ THIS GRAPH</h3>
 
         <h4>What is AQI?</h4>
         <p>AQI is a measure from 0 - 500 that describes daily air quality. Lower AQI values occur
             on days with good air quality, and higher AQI values occur on days with bad air quality. </p>
 
         <h4>90th Percentile AQI</h4>
-        <p>Lorem ipsum dolor sit amet 2 :)</p>
+        <p>90th percentile AQI is effectively a measure of "how bad it gets" with regards to air quality in a given
+            county. It is the 90th percentile value for AQI recorded in a county in 2019. We feel this is the best
+            metric to lend
+            insight into the correlation between class and air quality as it puts a quantitative value on the pollution
+            residents face
+            without bias towards extreme weather events.
+        </p>
 
         <h4>Median Household Income</h4>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Collected by The United States Department of Agriculture in 2019.</p>
     </div>
 </body>
 
